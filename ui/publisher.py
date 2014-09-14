@@ -5,7 +5,7 @@ class Publisher(object):
         import pika
         self.topic = topic
 
-        parameters = pika.URLParameters('amqp://54.76.117.95:5672')
+        parameters = pika.URLParameters('amqp://localhost:5672')
 
         connection = pika.BlockingConnection(parameters)
         self.channel = connection.channel()

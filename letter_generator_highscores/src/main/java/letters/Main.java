@@ -65,7 +65,7 @@ final class Main {
 
     private static ConnectionFactory connectionFactory() {
         final ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("54.76.117.95");
+        factory.setHost("localhost");
         return factory;
     }
 }

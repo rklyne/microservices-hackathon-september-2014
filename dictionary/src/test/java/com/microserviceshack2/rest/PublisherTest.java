@@ -12,7 +12,7 @@ public class PublisherTest {
 	@Test
 	public void testPostTopicWithBody() {
 		//given
-		String url = "http://54.76.117.95:8080";
+		String url = "http://localhost:8080";
 		String path = "topics";
 		String topicName = "words_found";
 		

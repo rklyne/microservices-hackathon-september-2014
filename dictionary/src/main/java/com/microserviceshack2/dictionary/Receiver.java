@@ -169,7 +169,7 @@ public class Receiver {
                 }
             }
             WordsFound wordsFound = new WordsFound(wordList, id);
-            String url = "http://54.76.117.95:8080";
+            String url = "http://localhost:8080";
             String path = "topics";
             String topicName = "words.found";
             int response = new Connection().postTopicWithBody(url, path,topicName, wordsFound);

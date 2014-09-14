@@ -6,7 +6,7 @@ class Receiver(object):
 
         from pika import BlockingConnection, ConnectionParameters
 
-        RABBIT_HOST = '54.76.117.95'
+        RABBIT_HOST = 'localhost'
         RABBIT_PORT = 5672
         EXCHANGE = 'combo'
 

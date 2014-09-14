@@ -1,4 +1,7 @@
 apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "letters.Main"
 
 version = '1.0'
 
@@ -22,4 +25,5 @@ dependencies {
 
     compile "org.springframework:spring-webmvc:$springVersion"
     compile "com.fasterxml.jackson.core:jackson-core:2.4.2"
+
 }
