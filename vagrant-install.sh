@@ -52,8 +52,8 @@ cat > /rest-config.json << EOF
 EOF
 chmod 777 /rest-config.json
 git clone https://github.com/douglassquirrel/combo
-(cd combo; ./archivist/archivist /rest-config.json > /log-archivist.log &)
-(cd combo; ./web/httpserver.py /rest-config.json > /log-rest-api.log &)
+(cd combo; python ./archivist/archivist.py /rest-config.json > /log-archivist.log &)
+(cd combo; python ./web/httpserver.py /rest-config.json > /log-rest-api.log &)
 
 cd /vagrant
 
@@ -72,22 +72,7 @@ cd /vagrant
     (cd scorer; gradle build)
 
 # Run services
-    # dict
-    # TODO: Provide libraries for this
-    (cd dictionary/target/classes; java com/microserviceshack2/dictionary/Receiver & )
-    # game board
-    (cd game_board; coffee game_board_service & )
-    # letters
-    (cd letter_generator_highscores; gradle run & )
-    # Highscores
-    # TODO: Make this work - just wrong ATM.
-    (cd letter_generator_highscores/build/classes/main; java highscore/Main & )
-    # scorer
-    # TODO: Make this Spring thing work
-    (cd scorer; gradle run & )
-    # scorekeeper
-    (cd scorekeeper; gradle run & )
-    
+    ./run.sh
 
 echo "Installed"
 echo "to play: vagrant ssh -c \"./play-game.sh\""
