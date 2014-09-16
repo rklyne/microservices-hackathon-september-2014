@@ -3,7 +3,7 @@
 # 
 # Publishes a single message to a given topic
 #
-context = require('rabbit.js').createContext('amqp://54.76.117.95:5672')
+context = require('rabbit.js').createContext('amqp://localhost:5672')
 argv = require('optimist').argv
 topic_exchange = 'combo'
 

@@ -34,7 +34,7 @@ final class HighScoreController {
     @PostConstruct
     public void postConstruct() throws IOException {
         final ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("54.76.117.95");
+        factory.setHost("localhost");
         final Consumer scoreConsumer = new Consumer(factory, "game.score");
         final Consumer gameEndedConsumer = new Consumer(factory, "game.ended");
         final ExecutorService executorService = Executors.newFixedThreadPool(2);

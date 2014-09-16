@@ -14,7 +14,7 @@ public class ScoreSST {
     @Before
     public void setUp() throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("54.76.117.95");
+        factory.setHost("localhost");
         Connection connection = factory.newConnection();
         publisher = new Publisher("combo", connection);
     }

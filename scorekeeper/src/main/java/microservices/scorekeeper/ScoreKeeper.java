@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class ScoreKeeper {
     public static final String EXCHANGE_NAME = "combo";
-    public static final String CONNECTION_HOST = "54.76.117.95";
+    public static final String CONNECTION_HOST = "localhost";
     public static final int CONNECTION_PORT = 5672;
     public static final String GAME_SCORE_TOPIC = "game.score";
     public static final String WORD_SCORE_TOPIC = "words.scored";

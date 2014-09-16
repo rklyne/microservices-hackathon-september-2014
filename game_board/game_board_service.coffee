@@ -1,4 +1,4 @@
-mg_server = 'amqp://54.76.117.95:5672';
+mg_server = 'amqp://localhost:5672';
 context = require('rabbit.js').createContext(mg_server);
 topic_exchange = 'combo';
 games = {}
