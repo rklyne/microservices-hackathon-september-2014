@@ -18,7 +18,7 @@ add-apt-repository -y ppa:pitti/postgresql
 # Then install the big stuff
 apt-get update
 apt-get install -y oracle-java8-installer python-setuptools maven coffeescript gradle rabbitmq-server amqp-tools python-psycopg2 curl git postgresql-9.2 
-# apt-get install -y groovy  libjs-coffeescript ruby ruby-rvm ruby-bundler 
+easy_install -U pip
 
 # RabbitMQ
 # chkconfig rabbitmq-server on
@@ -52,10 +52,12 @@ cat > /rest-config.json << EOF
 EOF
 chmod 777 /rest-config.json
 git clone https://github.com/douglassquirrel/combo
-(cd combo; python ./archivist/archivist.py /rest-config.json > /log-archivist.log &)
-(cd combo; python ./web/httpserver.py /rest-config.json > /log-rest-api.log &)
+
+# Need the Rest API and archivist runnign for some of the build/test/install steps below
+/vagrant/run-servers.sh
 
 cd /vagrant
+
 
 # Install
     # UI
