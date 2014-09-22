@@ -1,5 +1,6 @@
 #! /bin/bash
-
+    
+    ./run-servers.sh
     # dict
     # TODO: Provide libraries for this
     (cd dictionary/target/classes; java com/microserviceshack2/dictionary/Receiver & )
